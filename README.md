@@ -1,2 +1,2 @@
 # anemone
-shqayq alnuemani (2026) for three violas commissioned by Vivo Columbus
+shqayq alnuemani [شقائقَ النُّعْمانِ] (2026) for three violas commissioned by Vivo Columbus
