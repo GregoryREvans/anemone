@@ -1,0 +1,111 @@
+\documentclass[11pt]{article}
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\setmainfont{Helvetica}
+\usepackage[paperwidth=9.8in,paperheight=13.9in,margin=1in,headheight=0.0in,footskip=0.5in,includehead,includefoot,portrait]{geometry}
+\usepackage[absolute]{textpos}
+\TPGrid[0.5in, 0.25in]{23}{24}
+\parindent=0pt
+\parskip=12pt
+\usepackage{nopageno}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{eurosym}
+\usepackage{paracol}
+\usetikzlibrary{calc}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+
+\usepackage{xcolor}
+\definecolor{mypink}{rgb}{0.572549019607843, 0.184313725490196, 0.203921568627451}
+\definecolor{myred}{rgb}{0.843137254901961, 0.290196078431373, 0.270588235294118}
+\definecolor{myblack}{rgb}{0.094117647058824, 0.223529411764706, 0.254901960784314}
+\definecolor{mygrey}{rgb}{0.745098039215686, 0.725490196078431, 0.690196078431373}
+
+\begin{document}
+\pagecolor{mygrey}
+
+        \begin{tikzpicture}[remember picture, overlay]
+            \draw[line width = 2.5pt, color=myblack]
+                ($(current page.north west) + (0.25in,-0.25in)$)
+                rectangle
+                ($(current page.south east) + (-0.25in,0.25in)$);
+        \end{tikzpicture}
+
+\color{myblack}
+\begin{center}
+\fontsize{.6cm}{1em}\selectfont Other scores from Gregory Rowland Evans include: \hfill
+\end{center}
+\vspace*{4\baselineskip}
+{
+\begin{center}
+\setcolumnwidth{2.2\textwidth, 2.2\textwidth, 2.2\textwidth, 2.2\textwidth}
+\setlength{\columnseprule}{1pt}
+\setlength{\columnsep}{6em}
+\colseprulecolor{myblack}
+
+\begin{paracol}{3}
+\color{myred}
+\fontsize{.3cm}{1em}\selectfont UNACCOMPANIED
+\switchcolumn[1]
+\fontsize{.3cm}{1em}\selectfont CHAMBER
+\switchcolumn[2]
+\fontsize{.3cm}{1em}\selectfont LARGE ENSEMBLE
+\switchcolumn[0]
+\color{myblack}
+\fontsize{.1cm}{0.5em} \pmb{Onkos} (contrabass) 2019
+\switchcolumn[0]
+\fontsize{.1cm}{0.5em} \pmb{Chalk Line} (flute) 2020
+\switchcolumn[0]
+\fontsize{.1cm}{0.5em} \pmb{Birdless, Cloudless, Colourless} (alto saxophone) 2021
+\switchcolumn[0]
+\fontsize{.1cm}{0.5em} \pmb{Torlannol} (violoncello) 2023
+\switchcolumn[0]
+\fontsize{.1cm}{0.5em} \pmb{Infiorescenze} (alto flute) 2023
+\switchcolumn[0]
+\fontsize{.1cm}{0.5em} \pmb{Tupos} (piccolo) 2024
+\switchcolumn[0]
+\fontsize{.1cm}{0.5em} \pmb{Mamu} (violin) 2024
+\switchcolumn[0]
+\fontsize{.1cm}{0.5em} \pmb{Cairn} (violoncello) 2025
+\switchcolumn[1]
+\fontsize{.1cm}{0.5em} \pmb{Hamonshu} (string quartet) 2018-20
+\switchcolumn[1]
+\fontsize{.1cm}{0.5em} \pmb{Adumbration} (string quartet) 2020
+\switchcolumn[1]
+\fontsize{.1cm}{0.5em} \pmb{Zahrat Alearear} (bass flute, guitar) 2021
+\switchcolumn[1]
+\fontsize{.1cm}{0.5em} \pmb{Nagual} (mixed quartet) 2021
+\switchcolumn[1]
+\fontsize{.1cm}{0.5em} \pmb{Polillas} (string quartet) 2021
+\switchcolumn[1]
+\fontsize{.1cm}{0.5em} \pmb{Aspledon Undae} (string quartet) 2022
+\switchcolumn[1]
+\fontsize{.1cm}{0.5em} \pmb{ksvedati: a} (prepared violin, violoncello) 2023
+\switchcolumn[1]
+\fontsize{.1cm}{0.5em} \pmb{ksvedati: b} (prepared string quartet) 2023
+\switchcolumn[1]
+\fontsize{.1cm}{0.5em} \pmb{Nyctivoe II} (violin, violoncello) 2024
+\switchcolumn[2]
+\fontsize{.1cm}{0.5em} \pmb{Metamorphoses} (orchestra) 2018
+\switchcolumn[2]
+\fontsize{.1cm}{0.5em} \pmb{GUERRERO} (21 saxophones) 2018
+\switchcolumn[2]
+\fontsize{.1cm}{0.5em} \pmb{Tourbillon} (string ensemble) 2019-20
+\switchcolumn[2]
+\fontsize{.1cm}{0.5em} \pmb{Alu} (sinfonietta) 2023-24
+
+
+\end{paracol}
+\end{center}
+}
+\begin{textblock}{23}(0, 23.2)
+\color{myblack}
+\textcopyright 08-2025 \hfill
+Scores available for purchase at \color{myred}{www.gregoryrowlandevans.com} \hfill \color{myblack}
+\$30
+\end{textblock}
+
+\end{document}

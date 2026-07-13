@@ -1,0 +1,177 @@
+\documentclass[11pt]{article}
+%%%% MUST USE LATEX NOT XELATEX
+\usepackage{tikz}
+\usepackage{pgf-go}
+
+\usepackage[paperwidth=9.8in,paperheight=13.9in,margin=1in,headheight=0.0in,footskip=0.5in,includehead,includefoot,portrait]{geometry}
+
+
+\begin{document}
+
+
+
+\begin{center}
+
+\pgfgoset{
+ goban = {
+  background = {
+   fill = {color = pgfgo},
+   line = true},
+  grid = {line = {color = black}}},
+ players = {
+  black = {
+   stone = {
+    line = {color = black},
+    fill = {color = black}}},
+  white = {
+   stone = {line = {color = white}},
+   mark = {line = {color = red}}
+  }
+} }
+
+\begin{goban}[19, label = {at = {above, left}}, use i = true, scale=0.75,]
+\mark[t-circle]{J4, J10, J16, D4, D16, D10, P4, P16, P10}
+\stone[black] {O3}
+\stone[white] {P5}
+\stone[black] {Q4}
+\stone[white] {Q5}
+\stone[black] {R4}
+\end{goban}
+
+\end{center}
+
+
+\begin{center}
+\pgfgoset{
+ goban = {
+  background = {
+   fill = {color = pgfgo},
+   line = true},
+  grid = {line = {color = black}}},
+ players = {
+  black = {
+   stone = {
+    line = {color = black},
+    fill = {color = black}}},
+  white = {
+   stone = {line = {color = white}},
+   mark = {line = {color = red}}
+  }
+} }
+
+\begin{goban}[2, label = {at = {above, left}}, use i = true, scale=0.75,]
+\end{goban}
+\end{center}
+
+\begin{center}
+\pgfgoset{
+ goban = {
+  background = {
+   fill = {color = pgfgo},
+   line = true},
+  grid = {line = {color = black}}},
+ players = {
+  black = {
+   stone = {
+    line = {color = black},
+    fill = {color = black}}},
+  white = {
+   stone = {line = {color = white}},
+   mark = {line = {color = red}}
+  }
+} }
+
+\begin{goban}[3, label = {at = {above, left}}, use i = true, scale=0.75,]
+\end{goban}
+\end{center}
+
+\begin{center}
+\pgfgoset{
+ goban = {
+  background = {
+   fill = {color = pgfgo},
+   line = true},
+  grid = {line = {color = black}}},
+ players = {
+  black = {
+   stone = {
+    line = {color = black},
+    fill = {color = black}}},
+  white = {
+   stone = {line = {color = white}},
+   mark = {line = {color = red}}
+  }
+} }
+
+\begin{goban}[4, label = {at = {above, left}}, use i = true, scale=0.75,]
+\end{goban}
+\end{center}
+
+\begin{center}
+\pgfgoset{
+ goban = {
+  background = {
+   fill = {color = pgfgo},
+   line = true},
+  grid = {line = {color = black}}},
+ players = {
+  black = {
+   stone = {
+    line = {color = black},
+    fill = {color = black}}},
+  white = {
+   stone = {line = {color = white}},
+   mark = {line = {color = red}}
+  }
+} }
+
+\begin{goban}[5, label = {at = {above, left}}, use i = true, scale=0.75,]
+\end{goban}
+\end{center}
+
+\begin{center}
+\pgfgoset{
+ goban = {
+  background = {
+   fill = {color = pgfgo},
+   line = true},
+  grid = {line = {color = black}}},
+ players = {
+  black = {
+   stone = {
+    line = {color = black},
+    fill = {color = black}}},
+  white = {
+   stone = {line = {color = white}},
+   mark = {line = {color = red}}
+  }
+} }
+
+\begin{goban}[6, label = {at = {above, left}}, use i = true, scale=0.75,]
+\end{goban}
+\end{center}
+
+\begin{center}
+\pgfgoset{
+ goban = {
+  background = {
+   fill = {color = pgfgo},
+   line = true},
+  grid = {line = {color = black}}},
+ players = {
+  black = {
+   stone = {
+    line = {color = black},
+    fill = {color = black}}},
+  white = {
+   stone = {line = {color = white}},
+   mark = {line = {color = red}}
+  }
+} }
+
+\begin{goban}[7, label = {at = {above, left}}, use i = true, scale=0.75,]
+\end{goban}
+\end{center}
+
+
+\end{document}
