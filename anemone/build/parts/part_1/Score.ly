@@ -1,39 +1,39 @@
-\version "2.25.16"
+\version "2.25.16"  %2.22.1
 \language "english" %! LilyPondFile
 
 \include "abjad.ily"
-\include "../../score_stylesheet.ily"
+\include "../../parts_stylesheet.ily"
 \include "../../../lib.ily"
 \include "evans.ily"                                   %! LilyPondFile
-%{ \include "abjad.ily" %! LilyPondFile %}
-%{ \include "baca-spanners.ily"
-\include "../../../lib.ily"
-\include "evans.ily"
-\include "evans-accidentals-markups.ily"
-\include "evans-chart-markups.ily"
-\include "evans-spanners.ily" %}
 
 \header { %! LilyPondFile
     tagline = ##f
 } %! LilyPondFile
 
 \score{
-    \removeWithTag #'(formatting voice1 voice3 voice4 voice5 voice6 voice7 voice8 voice9 voice10 voice11 voice12 voice13)
     <<
+    %{ \removeWithTag #'(formatting voice1 voice3 voice4 voice5 voice6 voice7 voice8 voice9 voice10 voice11 voice12 voice13) %}
+    % EACH INSTRUMENT IS IN GROUPS OF 4
         { \include "layout.ly" }
     	{
-            \include "../../score/01.ly"
-            \include "../../score/02.ly"
-            \include "../../score/03.ly"
-            \include "../../score/04.ly"
-            \include "../../score/05.ly"
-            \include "../../score/06.ly"
-            \include "../../score/07.ly"
-            \include "../../score/08.ly"
-            \include "../../score/09.ly"
-            \include "../../score/10.ly"
-            \include "../../score/11.ly"
-            \include "../../score/12.ly"
+            \include "01.ly"
+            \include "02.ly"
+            \include "03.ly"
+            \include "04.ly"
+            \include "05.ly"
+            \include "06.ly"
+            \include "07.ly"
+            \include "08.ly"
+            \include "09.ly"
+            \include "10.ly"
+            \include "11.ly"
+            \include "12.ly"
+            \include "13.ly"
+            \include "14.ly"
+            \include "15.ly"
+            \include "16.ly"
+            \include "17.ly"
+            \include "18.ly"
     	}
     >>
 %{ \midi{} %}

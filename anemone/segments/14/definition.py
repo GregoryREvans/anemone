@@ -109,643 +109,436 @@ maker = evans.SegmentMaker(
         #     selector=lambda _: abjad.select.leaf(_, 0),
         #     direction=abjad.UP
         # ),
-        ##########
+        ########## Long trill
         ## Viola 1
         evans.MusicCommand(
-            ("change 1 voice", (0, 9)),
-            evans.even_division(
-                [16],
-                preprocessor=evans.make_preprocessor(quarters=True),
-                beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([-2, -1]))),
-                ],
-                rewrite=-2,
+            ("viola 1 voice", [0, 1, 2, 3, 4, 5]),
+            evans.make_tied_notes(),
+            evans.PitchHandler(["g"]),
+            lambda _: anemone.lib.integrate_multi_trills(
+                _,
+                intervals=[evans.PitchSegment(_).to_intervals() for _ in evans.Sequence([[0, 5], [0, 5, 7], [0, 4], [0, 2, 3, 4]]).rotate(0)],
+                harmonics_boolean_vector=[1],
             ),
-            evans.PitchHandler(
-                anemone.pitch.string_crossing_modules(first_state=1, random_seed=0, length=600),
-                staff_positions=True,
-            ),
-            evans.slur(
-                anemone.pitch.string_crossing_modules(
-                    first_state=1, random_seed=0, length=600, return_lengths_only=True
-                )
-            ),
-        ),
-        evans.MusicCommand(
-            ("viola 1 voice", (0, 9)),
-            evans.talea(
-                evans.Sequence([8, 6, 5, 4, 1, 1, 1]).rotate(0).zipped_bifurcation().partition_by_counts(evans.Sequence([4, 3, 2]).rotate(0)).helianthate(1, -1).flatten(depth=-1),
-                16,
-                preprocessor=evans.make_preprocessor(quarters=True),
-                beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([-2, -1]))),
-                ],
-                rewrite=-2,
-            ),
-            evans.PitchHandler(
-                [
-                    [-4, -4+9, -4+9+9, -4+9+9+9],
-                    -3, -2, -1, -3, -1, 0, 1, -3, 1, -3, 1, 2, 3, 4, -3, 4, -3, 4, -3, 4, 5, 6, 7, -3, 7, 8, 9, -3, 9, -3, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 19, 20,
-                ]
-            ),
-            evans.zero_padding_glissando,
+            lambda _: anemone.swells(abjad.select.logical_ties(_, grace=False), group_size=1, dyns=["p", "f"]),
             abjad.Clef("alto"),
-            abjad.LilyPondLiteral(
-                r"\override Dots.extra-offset = #'(0 . 0.75)",
-                site="before",
-            ),
-            evans.Attachment(
-                abjad.LilyPondLiteral(
-                    r"\revert Dots.stencil.extra-offset",
-                    site="after",
-                ),
-                selector=lambda _: abjad.select.leaf(_, -1),
-            ),
         ),
         evans.MusicCommand(
-            ("change 1 voice", (9, 13)),
+            ("viola 1 voice", [6]),
             evans.even_division(
                 [16],
-                extra_counts=[0, 0, 1, 0, 0, 0, 1],
                 preprocessor=evans.make_preprocessor(quarters=True),
+                extra_counts=[0],
+                rewrite=-1,
                 beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([0, -2, -1]))),
-                ],
-                rewrite=-2,
             ),
-            evans.PitchHandler(
-                anemone.pitch.string_crossing_modules(first_state=1, random_seed=0, length=600),
-                staff_positions=True,
+            evans.loop([_ - 10 for _ in [0, 1, 2, 0, 2, 1, 2, 3, 2]], [1]),
+            abjad.iterpitches.respell_with_sharps,
+            evans.ArticulationHandler(["tremolo"]),
+            abjad.StartHairpin("o<"),
+            evans.Attachment(
+                abjad.Dynamic("ff"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), len(abjad.select.leaves(_))//2)
             ),
-            evans.slur(
-                anemone.pitch.string_crossing_modules(
-                    first_state=1, random_seed=0, length=600, return_lengths_only=True
-                )
+            evans.Attachment(
+                abjad.StartHairpin(">o"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), len(abjad.select.leaves(_))//2)
+            ),
+            evans.Attachment(
+                abjad.StopHairpin(),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), -1)
             ),
         ),
         evans.MusicCommand(
-            ("viola 1 voice", (9, 13)),
-            evans.talea(
-                evans.Sequence([8, 6, 5, 4, 1, 1, 1]).rotate(3).zipped_bifurcation().partition_by_counts(evans.Sequence([4, 3, 2]).rotate(-3)).helianthate(1, -1).flatten(depth=-1),
-                16,
-                preprocessor=evans.make_preprocessor(quarters=True),
-                beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([0, -2, -1]))),
-                ],
-                rewrite=-2,
+            ("viola 1 voice", [7, 8, 9, 10]),
+            evans.make_tied_notes(),
+            evans.PitchHandler(["a"]),
+            lambda _: anemone.lib.integrate_multi_trills(
+                _,
+                intervals=[evans.PitchSegment(_).to_intervals() for _ in evans.Sequence([[0, 5], [0, 5, 7], [0, 4], [0, 2, 3, 4]]).rotate(1)],
+                harmonics_boolean_vector=[1],
             ),
-            evans.PitchHandler(
-                [
-                    [-4, -4+8, -4+8+8, -4+8+8+8],
-                    10, 5, 10, 9, 4, 9, 8, 3, 8, 7, 2, 7, 6, 1, 6, 5, 0, 5, 4, -1, 4, 3, -2, 3, 2, -3, 2, 1, -4, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-                ]
-            ),
-            evans.zero_padding_glissando,
-            abjad.LilyPondLiteral(
-                r"\override Dots.extra-offset = #'(0 . 0.75)",
-                site="before",
-            ),
-            evans.Attachment(
-                abjad.LilyPondLiteral(
-                    r"\revert Dots.stencil.extra-offset",
-                    site="after",
-                ),
-                selector=lambda _: abjad.select.leaf(_, -1),
-            ),
-            abjad.LilyPondLiteral(
-                r"\harmonicsOn",
-                site="before",
-            ),
-            evans.Attachment(
-                abjad.LilyPondLiteral(r"\harmonicsOff", site="after"),
-                selector=lambda _: abjad.select.leaf(_, -1),
-            ),
+            lambda _: anemone.swells(abjad.select.logical_ties(_, grace=False), group_size=1, dyns=["p", "f"]),
         ),
         evans.MusicCommand(
-            ("change 1 voice", (13, 19)),
+            ("viola 1 voice", [11]),
             evans.even_division(
                 [16],
-                extra_counts=[0, 2, 1, 2, 0, 0, 1],
                 preprocessor=evans.make_preprocessor(quarters=True),
-                beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([0, 1, -1]))),
-                ],
-                rewrite=-2,
-            ),
-            evans.PitchHandler(
-                anemone.pitch.string_crossing_modules(first_state=1, random_seed=0, length=600),
-                staff_positions=True,
-            ),
-            evans.slur(
-                anemone.pitch.string_crossing_modules(
-                    first_state=1, random_seed=0, length=600, return_lengths_only=True
-                )
-            ),
-        ),
-        evans.MusicCommand(
-            ("viola 1 voice", (13, 19)),
-            evans.talea(
-                evans.Sequence([8, 6, 5, 4, 1, 1, 1]).rotate(6).zipped_bifurcation().partition_by_counts(evans.Sequence([4, 3, 2]).rotate(-6)).helianthate(1, -1).flatten(depth=-1),
-                16,
-                preprocessor=evans.make_preprocessor(quarters=True),
-                beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([0, 1, -1]))),
-                ],
-                rewrite=-2,
-            ),
-            evans.PitchHandler(
-                [
-                    [-4, -4+8, -4+8+8, -4+8+8+8],
-                    10, 5, 10, 9, 4, 9, 8, 3, 8, 7, 2, 7, 6, 1, 6, 5, 0, 5, 4, -1, 4, 3, -2, 3, 2, -3, 2, 1, -4, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-                ]
-            ),
-            evans.zero_padding_glissando,
-            abjad.LilyPondLiteral(
-                r"\override Dots.extra-offset = #'(0 . 0.75)",
-                site="before",
-            ),
-            evans.Attachment(
-                abjad.LilyPondLiteral(
-                    r"\revert Dots.stencil.extra-offset",
-                    site="after",
-                ),
-                selector=lambda _: abjad.select.leaf(_, -1),
-            ),
-        ),
-        evans.MusicCommand(
-            ("change 1 voice", (19, 25)),
-            evans.even_division(
-                [32],
                 extra_counts=[1],
-                preprocessor=evans.make_preprocessor(quarters=True),
+                rewrite=-1,
                 beam_meter=True,
-                rewrite=-2,
             ),
-            evans.PitchHandler(
-                anemone.pitch.string_crossing_modules(first_state=2, random_seed=1, length=600),
-                staff_positions=True,
+            evans.loop([_ - 9 for _ in [0, 1, 2, 0, 2, 1, 2, 3, 2]], [1]),
+            abjad.iterpitches.respell_with_sharps,
+            evans.ArticulationHandler(["tremolo"]),
+            abjad.StartHairpin("o<"),
+            evans.Attachment(
+                abjad.Dynamic("ff"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), len(abjad.select.leaves(_))//2)
             ),
-            evans.slur(
-                anemone.pitch.string_crossing_modules(
-                    first_state=2, random_seed=1, length=600, return_lengths_only=True
-                )
+            evans.Attachment(
+                abjad.StartHairpin(">o"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), len(abjad.select.leaves(_))//2)
+            ),
+            evans.Attachment(
+                abjad.StopHairpin(),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), -1)
             ),
         ),
         evans.MusicCommand(
-            ("viola 1 voice", (19, 25)),
-            evans.talea(
-                evans.Sequence([8, 6, 5, 4, 1, 1, 1]).rotate(9).zipped_bifurcation().partition_by_counts(evans.Sequence([4, 3, 2]).rotate(-9)).helianthate(1, -1).flatten(depth=-1),
-                16,
+            ("viola 1 voice", [12, 13]),
+            evans.make_tied_notes(),
+            evans.PitchHandler(["b"]),
+            lambda _: anemone.lib.integrate_multi_trills(
+                _,
+                intervals=[evans.PitchSegment(_).to_intervals() for _ in evans.Sequence([[0, 5], [0, 5, 7], [0, 4], [0, 2, 3, 4]]).rotate(2)],
+                harmonics_boolean_vector=[1],
+            ),
+            lambda _: anemone.swells(abjad.select.logical_ties(_, grace=False), group_size=1, dyns=["p", "f"]),
+        ),
+        evans.MusicCommand(
+            ("viola 1 voice", [14, 15]),
+            evans.even_division(
+                [16],
                 preprocessor=evans.make_preprocessor(quarters=True),
+                extra_counts=[0, 1, 0, 1, 1, 0, 2],
+                rewrite=-1,
                 beam_meter=True,
-                rewrite=-2,
             ),
-            evans.PitchHandler(
-                [
-                    [3, 3+7, 3+7+7, 3+7+7+7],
-                    10,
-                    -3,
-                    12, 11, 12, 10, 13, 9, 13, 14, 13, 14, 15, 12, 11, 12, 10, 13, 9, 13, 14, 13, 14, 15
-                ]
-            ),
-            evans.zero_padding_glissando,
-            abjad.LilyPondLiteral(
-                r"\override Dots.extra-offset = #'(0 . 0.75)",
-                site="before",
-            ),
+            evans.loop([_ - 8 for _ in [0, 1, 2, 0, 2, 1, 2, 3, 2]], [2]),
+            abjad.iterpitches.respell_with_sharps,
+            evans.ArticulationHandler(["tremolo"]),
+            abjad.StartHairpin("o<"),
             evans.Attachment(
-                abjad.LilyPondLiteral(
-                    r"\revert Dots.stencil.extra-offset",
-                    site="after",
-                ),
-                selector=lambda _: abjad.select.leaf(_, -1),
+                abjad.Dynamic("f"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), -1)
+            ),
+        ),
+        evans.MusicCommand(
+            ("viola 1 voice", [16]),
+            evans.make_tied_notes(),
+            evans.PitchHandler(["c'"]),
+            lambda _: anemone.lib.integrate_multi_trills(
+                _,
+                intervals=[evans.PitchSegment(_).to_intervals() for _ in evans.Sequence([[0, 5], [0, 5, 7], [0, 4], [0, 2, 3, 4]]).rotate(3)],
+                harmonics_boolean_vector=[1],
+            ),
+            lambda _: anemone.swells(abjad.select.logical_ties(_, grace=False), group_size=1, dyns=["p", "f"]),
+        ),
+        evans.MusicCommand(
+            ("viola 1 voice", [17]),
+            evans.even_division(
+                [16],
+                preprocessor=evans.make_preprocessor(quarters=True),
+                extra_counts=evans.Sequence([0, 1, 0, 1, 1, 0, 2]).rotate(-1),
+                rewrite=-1,
+                beam_meter=True,
+            ),
+            evans.loop([_ - 7 for _ in [0, 1, 2, 0, 2, 1, 2, 3, 2]], [2]),
+            abjad.iterpitches.respell_with_sharps,
+            evans.ArticulationHandler(["tremolo"]),
+            abjad.StartHairpin("o<"),
+            evans.Attachment(
+                abjad.Dynamic("ff"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), -1)
+            ),
+        ),
+        evans.MusicCommand(
+            ("viola 1 voice", [18, 19, 20]),
+            evans.make_tied_notes(),
+            evans.PitchHandler(["d'"]),
+            lambda _: anemone.lib.integrate_multi_trills(
+                _,
+                intervals=[evans.PitchSegment(_).to_intervals() for _ in evans.Sequence([[0, 5], [0, 5, 7], [0, 4], [0, 2, 3, 4]]).rotate(4)],
+                harmonics_boolean_vector=[1],
+            ),
+            lambda _: anemone.swells(abjad.select.logical_ties(_, grace=False), group_size=1, dyns=["p", "f"]),
+        ),
+        evans.MusicCommand(
+            ("viola 1 voice", [21, 22, 23, 24]),
+            evans.even_division(
+                [16],
+                preprocessor=evans.make_preprocessor(quarters=True),
+                extra_counts=[0],
+                rewrite=-1,
+                beam_meter=True,
+            ),
+            evans.loop([_ - 6 for _ in [0, 1, 2, 0, 2, 1, 2, 3, 2]], [3]),
+            abjad.iterpitches.respell_with_sharps,
+            evans.ArticulationHandler(["tremolo"]),
+            abjad.StartHairpin("o<"),
+            evans.Attachment(
+                abjad.Dynamic("fff"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), -1)
             ),
         ),
         ## Viola 2
         evans.MusicCommand(
-            ("change 2 voice", (2, 7)),
-            evans.even_division(
-                [16],
-                preprocessor=evans.make_preprocessor(quarters=True),
-                beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([0, -1]))),
-                ],
-                rewrite=-2,
+            ("viola 2 voice", [0, 1, 2, 3, 4, 5, 6, 7]),
+            evans.make_tied_notes(),
+            evans.PitchHandler(["g"]),
+            lambda _: anemone.lib.integrate_multi_trills(
+                _,
+                intervals=[evans.PitchSegment(_).to_intervals() for _ in evans.Sequence([[0, 5], [0, 5, 7], [0, 4], [0, 2, 3, 4]]).rotate(0)],
+                harmonics_boolean_vector=[1],
             ),
-            evans.PitchHandler(
-                anemone.pitch.string_crossing_modules(first_state=2, random_seed=1, length=600),
-                staff_positions=True,
-            ),
-            evans.slur(
-                anemone.pitch.string_crossing_modules(
-                    first_state=2, random_seed=1, length=600, return_lengths_only=True
-                )
-            ),
-        ),
-        evans.MusicCommand(
-            ("viola 2 voice", (2, 7)),
-            evans.talea(
-                evans.Sequence([8, 6, 5, 4, 1, 1, 1]).rotate(1).zipped_bifurcation().partition_by_counts(evans.Sequence([4, 3, 2]).rotate(-1)).helianthate(1, -1).flatten(depth=-1),
-                16,
-                preprocessor=evans.make_preprocessor(quarters=True),
-                beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([0, -1]))),
-                ],
-                rewrite=-2,
-            ),
-            evans.PitchHandler(
-                [-5, 5]
-            ),
-            evans.zero_padding_glissando,
+            lambda _: anemone.swells(abjad.select.logical_ties(_, grace=False), group_size=1, dyns=["p", "f"]),
             abjad.Clef("alto"),
-            abjad.LilyPondLiteral(
-                r"\override Dots.extra-offset = #'(0 . 0.75)",
-                site="before",
-            ),
-            evans.Attachment(
-                abjad.LilyPondLiteral(
-                    r"\revert Dots.stencil.extra-offset",
-                    site="after",
-                ),
-                selector=lambda _: abjad.select.leaf(_, -1),
-            ),
         ),
         evans.MusicCommand(
-            ("change 2 voice", (7, 14)),
+            ("viola 2 voice", [8]),
             evans.even_division(
                 [16],
-                extra_counts=[1, 1, 0, 1, 0, 1, 0, 1],
                 preprocessor=evans.make_preprocessor(quarters=True),
+                extra_counts=[1],
+                rewrite=-1,
                 beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([-2, -1]))),
-                ],
-                rewrite=-2,
             ),
-            evans.PitchHandler(
-                anemone.pitch.string_crossing_modules(first_state=2, random_seed=1, length=600),
-                staff_positions=True,
+            evans.loop([_ - 9 for _ in [0, 1, 2, 0, 2, 1, 2, 3, 2]], [1]),
+            abjad.iterpitches.respell_with_sharps,
+            evans.ArticulationHandler(["tremolo"]),
+            abjad.StartHairpin("o<"),
+            evans.Attachment(
+                abjad.Dynamic("ff"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), len(abjad.select.leaves(_))//2)
             ),
-            evans.slur(
-                anemone.pitch.string_crossing_modules(
-                    first_state=2, random_seed=1, length=600, return_lengths_only=True
-                )
+            evans.Attachment(
+                abjad.StartHairpin(">o"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), len(abjad.select.leaves(_))//2)
+            ),
+            evans.Attachment(
+                abjad.StopHairpin(),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), -1)
             ),
         ),
         evans.MusicCommand(
-            ("viola 2 voice", (7, 14)),
-            evans.talea(
-                evans.Sequence([8, 6, 5, 4, 1, 1, 1]).rotate(4).zipped_bifurcation().partition_by_counts(evans.Sequence([4, 3, 2]).rotate(-4)).helianthate(1, -1).flatten(depth=-1),
-                16,
-                preprocessor=evans.make_preprocessor(quarters=True),
-                beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([-2, -1]))),
-                ],
-                rewrite=-2,
+            ("viola 2 voice", [9, 10, 11, 12]),
+            evans.make_tied_notes(),
+            evans.PitchHandler(["gs"]),
+            lambda _: anemone.lib.integrate_multi_trills(
+                _,
+                intervals=[evans.PitchSegment(_).to_intervals() for _ in evans.Sequence([[0, 5], [0, 5, 7], [0, 4], [0, 2, 3, 4]]).rotate(1)],
+                harmonics_boolean_vector=[1],
             ),
-            evans.PitchHandler(
-                [-5, 5]
-            ),
-            evans.zero_padding_glissando,
-            abjad.LilyPondLiteral(
-                r"\override Dots.extra-offset = #'(0 . 0.75)",
-                site="before",
-            ),
-            evans.Attachment(
-                abjad.LilyPondLiteral(
-                    r"\revert Dots.stencil.extra-offset",
-                    site="after",
-                ),
-                selector=lambda _: abjad.select.leaf(_, -1),
-            ),
-            abjad.LilyPondLiteral(
-                r"\harmonicsOn",
-                site="before",
-            ),
-            evans.Attachment(
-                abjad.LilyPondLiteral(r"\harmonicsOff", site="after"),
-                selector=lambda _: abjad.select.leaf(_, -1),
-            ),
+            lambda _: anemone.swells(abjad.select.logical_ties(_, grace=False), group_size=1, dyns=["p", "f"]),
         ),
         evans.MusicCommand(
-            ("change 2 voice", (14, 19)),
+            ("viola 2 voice", [13, 14]),
             evans.even_division(
                 [16],
-                extra_counts=[2, 1, 2, 1, 0, 0, 2, 1],
                 preprocessor=evans.make_preprocessor(quarters=True),
+                extra_counts=[0, 1],
+                rewrite=-1,
                 beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([0]))),
-                ],
-                rewrite=-2,
             ),
-            evans.PitchHandler(
-                anemone.pitch.string_crossing_modules(first_state=1, random_seed=0, length=600),
-                staff_positions=True,
-            ),
-            evans.slur(
-                anemone.pitch.string_crossing_modules(
-                    first_state=1, random_seed=0, length=600, return_lengths_only=True
-                )
-            ),
-        ),
-        evans.MusicCommand(
-            ("viola 2 voice", (14, 19)),
-            evans.talea(
-                evans.Sequence([8, 6, 5, 4, 1, 1, 1]).rotate(7).zipped_bifurcation().partition_by_counts(evans.Sequence([4, 3, 2]).rotate(-7)).helianthate(1, -1).flatten(depth=-1),
-                16,
-                preprocessor=evans.make_preprocessor(quarters=True),
-                beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([0]))),
-                ],
-                rewrite=-2,
-            ),
-            evans.PitchHandler(
-                [-5, 5]
-            ),
-            evans.zero_padding_glissando,
-            abjad.LilyPondLiteral(
-                r"\override Dots.extra-offset = #'(0 . 0.75)",
-                site="before",
+            evans.loop([_ - 8 for _ in [0, 1, 2, 0, 2, 1, 2, 3, 2]], [1]),
+            abjad.iterpitches.respell_with_sharps,
+            evans.ArticulationHandler(["tremolo"]),
+            abjad.StartHairpin("o<"),
+            evans.Attachment(
+                abjad.Dynamic("ff"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), len(abjad.select.leaves(_))//2)
             ),
             evans.Attachment(
-                abjad.LilyPondLiteral(
-                    r"\revert Dots.stencil.extra-offset",
-                    site="after",
-                ),
-                selector=lambda _: abjad.select.leaf(_, -1),
+                abjad.StartHairpin(">o"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), len(abjad.select.leaves(_))//2)
+            ),
+            evans.Attachment(
+                abjad.StopHairpin(),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), -1)
             ),
         ),
         evans.MusicCommand(
-            ("change 2 voice", (19, 25)),
+            ("viola 2 voice", [15]),
+            evans.make_tied_notes(),
+            evans.PitchHandler(["a"]),
+            lambda _: anemone.lib.integrate_multi_trills(
+                _,
+                intervals=[evans.PitchSegment(_).to_intervals() for _ in evans.Sequence([[0, 5], [0, 5, 7], [0, 4], [0, 2, 3, 4]]).rotate(2)],
+                harmonics_boolean_vector=[1],
+            ),
+            lambda _: anemone.swells(abjad.select.logical_ties(_, grace=False), group_size=1, dyns=["p", "f"]),
+        ),
+        evans.MusicCommand(
+            ("viola 2 voice", [16, 17, 18]),
             evans.even_division(
-                [32],
+                [16],
                 preprocessor=evans.make_preprocessor(quarters=True),
+                extra_counts=evans.Sequence([0, 1, 0, 1, 1, 0, 2]).rotate(-2),
+                rewrite=-1,
                 beam_meter=True,
-                rewrite=-2,
             ),
-            evans.PitchHandler(
-                anemone.pitch.string_crossing_modules(first_state=1, random_seed=0, length=600),
-                staff_positions=True,
-            ),
-            evans.slur(
-                anemone.pitch.string_crossing_modules(
-                    first_state=1, random_seed=0, length=600, return_lengths_only=True
-                )
+            evans.loop([_ - 7 for _ in [0, 1, 2, 0, 2, 1, 2, 3, 2]], [2]),
+            abjad.iterpitches.respell_with_sharps,
+            evans.ArticulationHandler(["tremolo"]),
+            abjad.StartHairpin("o<"),
+            evans.Attachment(
+                abjad.Dynamic("ff"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), -1)
             ),
         ),
         evans.MusicCommand(
-            ("viola 2 voice", (19, 25)),
-            evans.talea(
-                evans.Sequence([8, 6, 5, 4, 1, 1, 1]).rotate(10).zipped_bifurcation().partition_by_counts(evans.Sequence([4, 3, 2]).rotate(-10)).helianthate(1, -1).flatten(depth=-1),
-                16,
+            ("viola 2 voice", [19, 20]),
+            evans.make_tied_notes(),
+            evans.PitchHandler(["as"]),
+            lambda _: anemone.lib.integrate_multi_trills(
+                _,
+                intervals=[evans.PitchSegment(_).to_intervals() for _ in evans.Sequence([[0, 5], [0, 5, 7], [0, 4], [0, 2, 3, 4]]).rotate(3)],
+                harmonics_boolean_vector=[1],
+            ),
+            lambda _: anemone.swells(abjad.select.logical_ties(_, grace=False), group_size=1, dyns=["p", "f"]),
+        ),
+        evans.MusicCommand(
+            ("viola 2 voice", [21, 22, 23, 24]),
+            evans.even_division(
+                [16],
                 preprocessor=evans.make_preprocessor(quarters=True),
+                extra_counts=evans.Sequence([0, 1, 0, 1, 1, 0, 2]).rotate(-3),
+                rewrite=-1,
                 beam_meter=True,
-                rewrite=-2,
             ),
-            evans.PitchHandler(
-                [
-                    [3, 3+7, 3+7+7, 3+7+7+7],
-                    10,
-                    -3,
-                    9, 13, 14, 13, 14, 15, 12, 11, 12, 10, 13, 9, 13, 14, 13, 14, 15, 12, 11, 12, 10, 13,
-                ]
-            ),
-            evans.zero_padding_glissando,
-            abjad.LilyPondLiteral(
-                r"\override Dots.extra-offset = #'(0 . 0.75)",
-                site="before",
-            ),
+            evans.loop([_ - 5 for _ in [0, 1, 2, 0, 2, 1, 2, 3, 2]], [2]),
+            abjad.iterpitches.respell_with_sharps,
+            evans.ArticulationHandler(["tremolo"]),
+            abjad.StartHairpin("o<"),
             evans.Attachment(
-                abjad.LilyPondLiteral(
-                    r"\revert Dots.stencil.extra-offset",
-                    site="after",
-                ),
-                selector=lambda _: abjad.select.leaf(_, -1),
+                abjad.Dynamic("ff"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), -1)
             ),
         ),
         ## Viola 3
         evans.MusicCommand(
-            ("change 3 voice", (1, 5)),
-            evans.even_division(
-                [16],
-                preprocessor=evans.make_preprocessor(quarters=True),
-                beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([0, 1, 2, -2, -1]))),
-                ],
-                rewrite=-2,
+            ("viola 3 voice", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
+            evans.make_tied_notes(),
+            evans.PitchHandler(["g"]),
+            lambda _: anemone.lib.integrate_multi_trills(
+                _,
+                intervals=[evans.PitchSegment(_).to_intervals() for _ in evans.Sequence([[0, 5], [0, 5, 7], [0, 4], [0, 2, 3, 4]]).rotate(0)],
+                harmonics_boolean_vector=[1],
             ),
-            evans.PitchHandler(
-                anemone.pitch.string_crossing_modules(first_state=4, random_seed=3, length=600),
-                staff_positions=True,
-            ),
-            evans.slur(
-                anemone.pitch.string_crossing_modules(
-                    first_state=4, random_seed=3, length=600, return_lengths_only=True
-                )
-            ),
-        ),
-        evans.MusicCommand(
-            ("viola 3 voice", (1, 5)),
-            evans.talea(
-                evans.Sequence([8, 6, 5, 4, 1, 1, 1]).rotate(2).zipped_bifurcation().partition_by_counts(evans.Sequence([4, 3, 2]).rotate(-2)).helianthate(1, -1).flatten(depth=-1),
-                16,
-                preprocessor=evans.make_preprocessor(quarters=True),
-                beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([0, 1, 2, -2, -1]))),
-                ],
-                rewrite=-2,
-            ),
-            evans.PitchHandler(
-                [-5, 5]
-            ),
-            evans.zero_padding_glissando,
+            lambda _: anemone.swells(abjad.select.logical_ties(_, grace=False), group_size=1, dyns=["p", "f"]),
             abjad.Clef("alto"),
-            abjad.LilyPondLiteral(
-                r"\override Dots.extra-offset = #'(0 . 0.75)",
-                site="before",
-            ),
-            evans.Attachment(
-                abjad.LilyPondLiteral(
-                    r"\revert Dots.stencil.extra-offset",
-                    site="after",
-                ),
-                selector=lambda _: abjad.select.leaf(_, -1),
-            ),
         ),
         evans.MusicCommand(
-            ("change 3 voice", (5, 12)),
+            ("viola 3 voice", [10]),
             evans.even_division(
                 [16],
-                extra_counts=[1, 1, 1, 0, 0, 1, 1, 0, 0],
                 preprocessor=evans.make_preprocessor(quarters=True),
+                extra_counts=[0],
+                rewrite=-1,
                 beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([0, 1, -1]))),
-                ],
-                rewrite=-2,
             ),
-            evans.PitchHandler(
-                anemone.pitch.string_crossing_modules(first_state=4, random_seed=3, length=600),
-                staff_positions=True,
+            evans.loop([_ - 8 for _ in [0, 1, 2, 0, 2, 1, 2, 3, 2]], [1]),
+            abjad.iterpitches.respell_with_sharps,
+            evans.ArticulationHandler(["tremolo"]),
+            abjad.StartHairpin("o<"),
+            evans.Attachment(
+                abjad.Dynamic("ff"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), len(abjad.select.leaves(_))//2)
             ),
-            evans.slur(
-                anemone.pitch.string_crossing_modules(
-                    first_state=4, random_seed=3, length=600, return_lengths_only=True
-                )
+            evans.Attachment(
+                abjad.StartHairpin(">o"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), len(abjad.select.leaves(_))//2)
+            ),
+            evans.Attachment(
+                abjad.StopHairpin(),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), -1)
             ),
         ),
         evans.MusicCommand(
-            ("viola 3 voice", (5, 12)),
-            evans.talea(
-                evans.Sequence([8, 6, 5, 4, 1, 1, 1]).rotate(5).zipped_bifurcation().partition_by_counts(evans.Sequence([4, 3, 2]).rotate(-5)).helianthate(1, -1).flatten(depth=-1),
-                16,
-                preprocessor=evans.make_preprocessor(quarters=True),
-                beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([0, 1, -1]))),
-                ],
-                rewrite=-2,
+            ("viola 3 voice", [11, 12, 13]),
+            evans.make_tied_notes(),
+            evans.PitchHandler(["gqs"]),
+            lambda _: anemone.lib.integrate_multi_trills(
+                _,
+                intervals=[evans.PitchSegment(_).to_intervals() for _ in evans.Sequence([[0, 5], [0, 5, 7], [0, 4], [0, 2, 3, 4]]).rotate(1)],
+                harmonics_boolean_vector=[1],
             ),
-            evans.PitchHandler(
-                [-5, 5]
-            ),
-            evans.zero_padding_glissando,
-            abjad.LilyPondLiteral(
-                r"\override Dots.extra-offset = #'(0 . 0.75)",
-                site="before",
-            ),
-            evans.Attachment(
-                abjad.LilyPondLiteral(
-                    r"\revert Dots.stencil.extra-offset",
-                    site="after",
-                ),
-                selector=lambda _: abjad.select.leaf(_, -1),
-            ),
-            abjad.LilyPondLiteral(
-                r"\harmonicsOn",
-                site="before",
-            ),
-            evans.Attachment(
-                abjad.LilyPondLiteral(r"\harmonicsOff", site="after"),
-                selector=lambda _: abjad.select.leaf(_, -1),
-            ),
+            lambda _: anemone.swells(abjad.select.logical_ties(_, grace=False), group_size=1, dyns=["p", "f"]),
         ),
         evans.MusicCommand(
-            ("change 3 voice", (12, 20)),
+            ("viola 3 voice", [14]),
             evans.even_division(
                 [16],
-                extra_counts=[2, 1, 1, 0, 2, 2, 1, 0, 0],
                 preprocessor=evans.make_preprocessor(quarters=True),
+                extra_counts=[1],
+                rewrite=-1,
                 beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([0, -2, -1]))),
-                ],
-                rewrite=-2,
             ),
-            evans.PitchHandler(
-                anemone.pitch.string_crossing_modules(first_state=4, random_seed=3, length=600),
-                staff_positions=True,
-            ),
-            evans.slur(
-                anemone.pitch.string_crossing_modules(
-                    first_state=4, random_seed=3, length=600, return_lengths_only=True
-                )
-            ),
-        ),
-        evans.MusicCommand(
-            ("viola 3 voice", (12, 20)),
-            evans.talea(
-                evans.Sequence([8, 6, 5, 4, 1, 1, 1]).rotate(8).zipped_bifurcation().partition_by_counts(evans.Sequence([4, 3, 2]).rotate(-8)).helianthate(1, -1).flatten(depth=-1),
-                16,
-                preprocessor=evans.make_preprocessor(quarters=True),
-                beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([0, -2, -1]))),
-                ],
-                rewrite=-2,
-            ),
-            evans.PitchHandler(
-                [-5, 5]
-            ),
-            evans.zero_padding_glissando,
-            abjad.LilyPondLiteral(
-                r"\override Dots.extra-offset = #'(0 . 0.75)",
-                site="before",
+            evans.loop([_ - 7 for _ in [0, 1, 2, 0, 2, 1, 2, 3, 2]], [2]),
+            abjad.iterpitches.respell_with_sharps,
+            evans.ArticulationHandler(["tremolo"]),
+            abjad.StartHairpin("o<"),
+            evans.Attachment(
+                abjad.Dynamic("ff"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), len(abjad.select.leaves(_))//2)
             ),
             evans.Attachment(
-                abjad.LilyPondLiteral(
-                    r"\revert Dots.stencil.extra-offset",
-                    site="after",
-                ),
-                selector=lambda _: abjad.select.leaf(_, -1),
+                abjad.StartHairpin(">o"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), len(abjad.select.leaves(_))//2)
+            ),
+            evans.Attachment(
+                abjad.StopHairpin(),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), -1)
             ),
         ),
         evans.MusicCommand(
-            ("change 3 voice", (20, 25)),
+            ("viola 3 voice", [15, 16]),
+            evans.make_tied_notes(),
+            evans.PitchHandler(["gs"]),
+            lambda _: anemone.lib.integrate_multi_trills(
+                _,
+                intervals=[evans.PitchSegment(_).to_intervals() for _ in evans.Sequence([[0, 5], [0, 5, 7], [0, 4], [0, 2, 3, 4]]).rotate(2)],
+                harmonics_boolean_vector=[1],
+            ),
+            lambda _: anemone.swells(abjad.select.logical_ties(_, grace=False), group_size=1, dyns=["p", "f"]),
+        ),
+        evans.MusicCommand(
+            ("viola 3 voice", [17, 18]),
             evans.even_division(
-                [32],
-                extra_counts=[-1],
+                [16],
                 preprocessor=evans.make_preprocessor(quarters=True),
+                extra_counts=[1, 0],
+                rewrite=-1,
                 beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([0]))),
-                ],
-                rewrite=-2,
             ),
-            evans.PitchHandler(
-                anemone.pitch.string_crossing_modules(first_state=4, random_seed=3, length=600),
-                staff_positions=True,
-            ),
-            evans.slur(
-                anemone.pitch.string_crossing_modules(
-                    first_state=4, random_seed=3, length=600, return_lengths_only=True
-                )
+            evans.loop([_ - 6 for _ in [0, 1, 2, 0, 2, 1, 2, 3, 2]], [2]),
+            abjad.iterpitches.respell_with_sharps,
+            evans.ArticulationHandler(["tremolo"]),
+            abjad.StartHairpin("o<"),
+            evans.Attachment(
+                abjad.Dynamic("ff"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), -1)
             ),
         ),
         evans.MusicCommand(
-            ("viola 3 voice", (20, 25)),
-            evans.talea(
-                evans.Sequence([8, 6, 5, 4, 1, 1, 1]).rotate(11).zipped_bifurcation().partition_by_counts(evans.Sequence([4, 3, 2]).rotate(-11)).helianthate(1, -1).flatten(depth=-1),
-                16,
+            ("viola 3 voice", [19, 20]),
+            evans.make_tied_notes(),
+            evans.PitchHandler(["gtqs"]),
+            lambda _: anemone.lib.integrate_multi_trills(
+                _,
+                intervals=[evans.PitchSegment(_).to_intervals() for _ in evans.Sequence([[0, 5], [0, 5, 7], [0, 4], [0, 2, 3, 4]]).rotate(3)],
+                harmonics_boolean_vector=[1],
+            ),
+            lambda _: anemone.swells(abjad.select.logical_ties(_, grace=False), group_size=1, dyns=["p", "f"]),
+        ),
+        evans.MusicCommand(
+            ("viola 3 voice", [21, 22, 23, 24]),
+            evans.even_division(
+                [16],
                 preprocessor=evans.make_preprocessor(quarters=True),
+                extra_counts=evans.Sequence([0, 1, 0, 1, 1, 0, 2]).rotate(-4),
+                rewrite=-1,
                 beam_meter=True,
-                pre_commands=[
-                    lambda _: rmakers.force_rest(abjad.select.get(abjad.select.tuplets(_), abjad.index([0]))),
-                ],
-                rewrite=-2,
             ),
-            evans.PitchHandler(
-                [
-                    [3, 3+7, 3+7+7, 3+7+7+7],
-                    10,
-                    -3,
-                    15, 12, 11, 12, 10, 13, 9, 13, 14, 13, 14, 15, 12, 11, 12, 10, 13, 9, 13, 14, 13, 14,
-                ]
-            ),
-            evans.zero_padding_glissando,
-            abjad.LilyPondLiteral(
-                r"\override Dots.extra-offset = #'(0 . 0.75)",
-                site="before",
-            ),
+            evans.loop([_ - 4 for _ in [0, 1, 2, 0, 2, 1, 2, 3, 2]], [3]),
+            abjad.iterpitches.respell_with_sharps,
+            evans.ArticulationHandler(["tremolo"]),
+            abjad.StartHairpin("o<"),
             evans.Attachment(
-                abjad.LilyPondLiteral(
-                    r"\revert Dots.stencil.extra-offset",
-                    site="after",
-                ),
-                selector=lambda _: abjad.select.leaf(_, -1),
+                abjad.Dynamic("fff"),
+                selector=lambda _: abjad.select.leaf(abjad.select.leaves(_), -1)
             ),
         ),
         ####

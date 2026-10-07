@@ -205,7 +205,11 @@ reduced_signatures_13 = evans.reduce_fermata_measures(
 ## 14 ##
 ##
 
-signatures_14 = [abjad.TimeSignature((4, 4)) for _ in range(25)]
+numerators_14 = evans.Sequence([[8, 8, 5, 4], [8, 7, 6, 5], [8, 6, 4]]).helianthate(3, -2).rotate(5).flatten(depth=-1)
+
+proposed_meter_sequence_14 = evans.Sequence([abjad.TimeSignature((_, 8)) for _ in numerators_14]).reduce_time_signatures_in_list().reverse()
+
+signatures_14 = [proposed_meter_sequence_14[_] for _ in range(25)]
 
 signatures_14.append(abjad.TimeSignature((1, 4)))  # for ending skip
 

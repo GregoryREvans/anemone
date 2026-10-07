@@ -600,12 +600,14 @@
                                         r2
                                         \p
 
+                                        \highest
                                         \override Staff.Stem.stemlet-length = 0.75
-                                        c'32
+                                        b'32
+                                        \pp
                                         ^ \markup pizz.
                                         [
 
-                                        c'32
+                                        b'32
 
                                         \revert Staff.Stem.stemlet-length
                                         r8.
@@ -622,17 +624,17 @@
                                             r4.
 
                                             \override Staff.Stem.stemlet-length = 0.75
-                                            c'8
+                                            b'8
                                             [
 
                                             \revert Staff.Stem.stemlet-length
-                                            c'8
+                                            b'8
                                             ]
 
                                         }
 
                                         \override Staff.Stem.stemlet-length = 0.75
-                                        c'16
+                                        b'16
                                         [
 
                                         \revert Staff.Stem.stemlet-length
@@ -645,10 +647,10 @@
                                           %! evans.SegmentMaker.comment_measure_numbers()
                                         % [viola 1 voice measure 9]
                                         \override Staff.Stem.stemlet-length = 0.75
-                                        c'32
+                                        b'32
                                         [
 
-                                        c'32
+                                        b'32
 
                                         r16
 
@@ -661,7 +663,7 @@
 
                                             r4
 
-                                            c'8
+                                            b'8
 
                                         }
 
@@ -672,11 +674,12 @@
                                             r16.
                                             [
 
-                                            c'32
+                                            b'32
 
                                             \revert Staff.Stem.stemlet-length
-                                            c'32
+                                            b'32
                                             ]
+                                            \revert-noteheads
 
                                         }
 
@@ -690,7 +693,10 @@
 
                                             r4
 
-                                            c'8
+                                            \highest
+                                            b'8
+                                            \mp
+                                            \<
 
                                         }
 
@@ -700,7 +706,7 @@
                                           %! evans.SegmentMaker.comment_measure_numbers()
                                         % [viola 1 voice measure 11]
                                         \override Staff.Stem.stemlet-length = 0.75
-                                        c'16
+                                        b'16
                                         [
 
                                         \revert Staff.Stem.stemlet-length
@@ -710,11 +716,13 @@
                                         \times 2/3
                                         {
 
-                                            c'8
+                                            b'8
 
                                             r2
 
-                                            c'8
+                                            b'8
+                                            \f
+                                            \revert-noteheads
 
                                         }
 
@@ -729,6 +737,7 @@
                                         bf2
                                         :32
                                         \p
+                                        ^ \markup arco
                                           %! abjad.glissando(7)
                                         \glissando
 
@@ -1449,12 +1458,14 @@
                                         % [viola 2 voice measure 7]
                                         r2.
 
+                                        \highest
                                         \override Staff.Stem.stemlet-length = 0.75
-                                        c'32
+                                        b'32
+                                        \pp
                                         ^ \markup pizz.
                                         [
 
-                                        c'32
+                                        b'32
 
                                         \revert Staff.Stem.stemlet-length
                                         r8.
@@ -1468,14 +1479,14 @@
                                             % [viola 2 voice measure 8]
                                             r4
 
-                                            c'8
+                                            b'8
 
                                         }
 
                                         r2
 
                                         \override Staff.Stem.stemlet-length = 0.75
-                                        c'16
+                                        b'16
                                         [
 
                                         \revert Staff.Stem.stemlet-length
@@ -1488,19 +1499,20 @@
                                               %! COMMENT_MEASURE_NUMBERS
                                               %! evans.SegmentMaker.comment_measure_numbers()
                                             % [viola 2 voice measure 9]
-                                            c'8
+                                            b'8
 
                                             r2
 
-                                            c'8
+                                            b'8
 
                                         }
 
                                         \override Staff.Stem.stemlet-length = 0.75
-                                        c'64
+                                        b'64
                                         [
 
-                                        c'64
+                                        b'64
+                                        \revert-noteheads
 
                                         \revert Staff.Stem.stemlet-length
                                         r16.
@@ -1513,6 +1525,7 @@
                                         b'1
                                         :32
                                         \pp
+                                        ^ \markup arco
                                         ~
 
                                           %! COMMENT_MEASURE_NUMBERS
@@ -2085,11 +2098,13 @@
                                         % [viola 3 voice measure 10]
                                         r2.
 
-                                        \revert-noteheads
+                                        \highest
                                         \override Staff.Stem.stemlet-length = 0.75
-                                        c'16
+                                        a''16
+                                        \mp
                                         ^ \markup pizz.
                                         [
+                                        \<
 
                                         \revert Staff.Stem.stemlet-length
                                         r8.
@@ -2101,11 +2116,11 @@
                                               %! COMMENT_MEASURE_NUMBERS
                                               %! evans.SegmentMaker.comment_measure_numbers()
                                             % [viola 3 voice measure 11]
-                                            c'8
+                                            a''8
 
                                             r2
 
-                                            c'8
+                                            a''8
 
                                         }
 
@@ -2119,7 +2134,9 @@
                                             % [viola 3 voice measure 12]
                                             r4
 
-                                            c'8
+                                            a''8
+                                            \f
+                                            \revert-noteheads
 
                                         }
 

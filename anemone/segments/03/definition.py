@@ -202,11 +202,18 @@ maker = evans.SegmentMaker(
                 rewrite=-1,
                 beam_meter=True,
             ),
+            evans.PitchHandler([6], staff_positions=True),
+            abjad.LilyPondLiteral(r"\highest", site="before"),
+            evans.Attachment(
+                abjad.LilyPondLiteral(r"\revert-noteheads", site="after"),
+                selector=lambda _: abjad.select.note(_, -1),
+            ),
             evans.Attachment(
                 abjad.Markup(r"\markup pizz."),
                 direction=abjad.UP,
                 selector=lambda _: abjad.select.note(_, 0),
             ),
+            abjad.Dynamic("pp"),
         ),
         evans.MusicCommand(
             ("viola 1 voice", [9, 10, 11]),
@@ -225,6 +232,18 @@ maker = evans.SegmentMaker(
                 rewrite=-1,
                 beam_meter=True,
             ),
+            evans.PitchHandler([6], staff_positions=True),
+            abjad.LilyPondLiteral(r"\highest", site="before"),
+            evans.Attachment(
+                abjad.LilyPondLiteral(r"\revert-noteheads", site="after"),
+                selector=lambda _: abjad.select.note(_, -1),
+            ),
+            abjad.Dynamic("mp"),
+            abjad.StartHairpin("<"),
+            evans.Attachment(
+                abjad.Dynamic("f"),
+                selector=lambda _: abjad.select.note(_, -1)
+            ),
         ),
         evans.MusicCommand(
             ("viola 1 voice", [12, 13]),
@@ -233,6 +252,11 @@ maker = evans.SegmentMaker(
             abjad.glissando,
             abjad.Dynamic("p"),
             evans.ArticulationHandler(["tremolo"]),
+            evans.Attachment(
+                abjad.Markup(r"\markup arco"),
+                direction=abjad.UP,
+                selector=lambda _: abjad.select.note(_, 0),
+            ),
         ),
         ## Viola 2
         evans.MusicCommand(
@@ -445,11 +469,18 @@ maker = evans.SegmentMaker(
                 rewrite=-1,
                 beam_meter=True,
             ),
+            evans.PitchHandler([6], staff_positions=True),
+            abjad.LilyPondLiteral(r"\highest", site="before"),
+            evans.Attachment(
+                abjad.LilyPondLiteral(r"\revert-noteheads", site="after"),
+                selector=lambda _: abjad.select.note(_, -1),
+            ),
             evans.Attachment(
                 abjad.Markup(r"\markup pizz."),
                 direction=abjad.UP,
                 selector=lambda _: abjad.select.note(_, 0),
             ),
+            abjad.Dynamic("pp"),
         ),
         evans.MusicCommand(
             ("viola 2 voice", [9, 10, 11]),
@@ -462,6 +493,11 @@ maker = evans.SegmentMaker(
                 selector=lambda _: abjad.select.note(_, -1),
             ),
             abjad.Dynamic("pp"),
+            evans.Attachment(
+                abjad.Markup(r"\markup arco"),
+                direction=abjad.UP,
+                selector=lambda _: abjad.select.note(_, 0),
+            ),
         ),
         evans.MusicCommand(
             ("viola 2 voice", [12, 13]),
@@ -679,14 +715,22 @@ maker = evans.SegmentMaker(
                 rewrite=-1,
                 beam_meter=True,
             ),
+            evans.PitchHandler([6], staff_positions=True, clef="treble"),
+            abjad.LilyPondLiteral(r"\highest", site="before"),
+            evans.Attachment(
+                abjad.LilyPondLiteral(r"\revert-noteheads", site="after"),
+                selector=lambda _: abjad.select.note(_, -1),
+            ),
             evans.Attachment(
                 abjad.Markup(r"\markup pizz."),
                 direction=abjad.UP,
                 selector=lambda _: abjad.select.note(_, 0),
             ),
+            abjad.Dynamic("mp"),
+            abjad.StartHairpin("<"),
             evans.Attachment(
-                abjad.LilyPondLiteral(r"\revert-noteheads", site="before"),
-                selector=lambda _: abjad.select.note(_, 0),
+                abjad.Dynamic("f"),
+                selector=lambda _: abjad.select.note(_, -1)
             ),
         ),
         evans.MusicCommand(

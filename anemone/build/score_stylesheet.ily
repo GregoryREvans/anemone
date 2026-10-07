@@ -314,7 +314,7 @@ dashedStaffSymbolLines =
 }
 
 \layout {
-	\accidentalStyle neo-modern % was forget
+	\accidentalStyle dodecaphonic % was forget
 	%{ accidentals are printed like with modern,
 	but they are printed again if the same note appears later in the same measure
 	– except if the note is immediately repeated. %}

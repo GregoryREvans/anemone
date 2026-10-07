@@ -1,10 +1,10 @@
 \documentclass{article}
-\usepackage[paperwidth=9.8in,paperheight=13.9in,]{geometry}
+\usepackage[paperwidth=11in,paperheight=8.5in,]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{fontspec}
 %\setmainfont{Helvetica}
 \usepackage{tikz}
-
+\usepackage[absolute]{textpos}
 
 \newfontfamily\helveticafont{Helvetica}
 \newenvironment{helvetica}{\helveticafont}
@@ -14,11 +14,11 @@
 \definecolor{myred}{rgb}{0.843137254901961, 0.290196078431373, 0.270588235294118}
 \definecolor{myblack}{rgb}{0.094117647058824, 0.223529411764706, 0.254901960784314}
 \definecolor{mygrey}{rgb}{0.745098039215686, 0.725490196078431, 0.690196078431373}
-\definecolor{myyellow}{rgb}{0.972549019607843, 0.819607843137255, 0.27843137254902}
-\definecolor{myrouge}{rgb}{0.803921568627451, 0.203921568627451, 0.223529411764706}
 
-%\definecolor{myyellow}{rgb}{248, 209, 71}
-%\definecolor{myrouge}{rgb}{205, 52, 57}
+\definecolor{anemoneblack}{rgb}{0.00392156863, 0, 0}
+\definecolor{anemonegreen}{rgb}{0.474509804, 0.576470588, 0.48627451}
+\definecolor{anemonered}{rgb}{0.6, 0.211764706, 0.22745098}
+\definecolor{anemonewhite}{rgb}{0.760784314, 0.768627451, 0.6}
 
 % Set page margins
 \geometry{top=1.4cm,bottom=3cm,left=7.5cm,right=3cm}
@@ -26,34 +26,38 @@
 \begin{document}
 
 \thispagestyle{empty} % Remove page number
-\pagecolor{mygrey}
+\pagecolor{anemonegreen}
 % Draw square in the center
 \begin{tikzpicture}[remember picture,overlay]
-    \draw[line width=4pt, color=myblack] (current page.center) ++(-5.3cm,-0.2cm) rectangle ++(17cm,17cm);
+    \draw[line width=4pt, color=anemoneblack] (current page.center) ++(-0.4cm,-3.5cm) rectangle ++(14cm,14cm);
 \end{tikzpicture}
 
+\begin{textblock}{23}(8, 0.5)
 \begin{helvetica}
 {
 \noindent
-\textcolor{myblack}{
-\fontsize{29pt}{29pt}
-\textbf{\hspace{-3mm} GREGORY ROWLAND EVANS} \\
-\textbf{NYCTIVOE:} \\
-\textbf{TERZA PARTE} \fontsize{17pt}{17pt} (2025) \\
+\textcolor{anemonered}{
+\fontsize{26.5pt}{26.5pt}
+\textbf{\hspace{-4mm} GREGORY ROWLAND EVANS} \\
+\hspace{3.8in}\textbf{SHQAYQ ALNUEMANI} \\
+\textbf{windflowers} \fontsize{17pt}{17pt} (2026) \\
 \fontsize{13pt}{13pt}
-PER SOPRANO, NARRATORE E ENSEMBLE
+PER TRE VIOLE
 }
 }
 \end{helvetica}
 
+\end{textblock}
+
+\begin{textblock}{23}(8, 9.75)
 {
-\vspace*{28\baselineskip}
 \noindent
-\textcolor{myred}{
+\textcolor{anemonewhite}{
 \fontsize{29pt}{29pt}\selectfont
 \textbf{PARTITURA}
 }
 }
+\end{textblock}
 
 \clearpage
 
@@ -67,31 +71,40 @@ PER SOPRANO, NARRATORE E ENSEMBLE
 \pagecolor{white}
 % Draw square in the center
 \begin{tikzpicture}[remember picture,overlay]
-    \draw[line width=4pt, color=mypink] (current page.center) ++(-5.3cm,-0.2cm) rectangle ++(17cm,17cm);
+    \draw[line width=4pt, color=anemoneblack] (current page.center) ++(-0.4cm,-3.5cm) rectangle ++(14cm,14cm);
 \end{tikzpicture}
 
+\begin{textblock}{23}(8, 0.5)
 \begin{helvetica}
 {
 \noindent
-\textcolor{mypink}{
-\fontsize{29pt}{29pt}
-\textbf{\hspace{-3mm} GREGORY ROWLAND EVANS} \\
-\textbf{NYCTIVOE:} \\
-\textbf{TERZA PARTE} \fontsize{17pt}{17pt} (2025) \\
+\textcolor{anemoneblack}{
+\fontsize{26.5pt}{26.5pt}
+\textbf{\hspace{-4mm} GREGORY ROWLAND EVANS} \\
+\hspace{3.8in}\textbf{SHQAYQ ALNUEMANI} \\
+\textbf{windflowers} \fontsize{17pt}{17pt} (2026) \\
 \fontsize{13pt}{13pt}
-PER SOPRANO, NARRATORE E ENSEMBLE
+PER TRE VIOLE
 }
 }
 \end{helvetica}
+\end{textblock}
 
+\begin{textblock}{23}(8, 9.75)
 {
-\vspace*{28\baselineskip}
 \noindent
-\textcolor{myblack}{
+\textcolor{anemonered}{
 %\setmainfont{Latin}
 \fontsize{29pt}{29pt}\selectfont
 \textbf{PARTITURA}
 }
 }
+\end{textblock}
+
+\clearpage
+
+\thispagestyle{empty} % Remove page number
+\pagecolor{white}
+\phantom{text} \hfill \phantom{()}
 
 \end{document}

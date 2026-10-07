@@ -154,6 +154,11 @@ maker = evans.SegmentMaker(
             ),
             abjad.glissando,
             abjad.Clef("alto"),
+            evans.Attachment(
+                abjad.Markup(r"\markup crine"),
+                selector=lambda _: abjad.select.note(_, 0),
+                direction=abjad.UP,
+            ),
         ),
         evans.MusicCommand(
             ("viola 1 voice", [1, 2, 3, 4]),
@@ -255,6 +260,11 @@ maker = evans.SegmentMaker(
             ),
             abjad.glissando,
             abjad.Clef("alto"),
+            evans.Attachment(
+                abjad.Markup(r"\markup crine"),
+                selector=lambda _: abjad.select.note(_, 0),
+                direction=abjad.UP,
+            ),
         ),
         evans.MusicCommand(
             ("viola 2 voice", [1, 2, 3, 4, 5]),
@@ -356,6 +366,11 @@ maker = evans.SegmentMaker(
             ),
             abjad.glissando,
             abjad.Clef("alto"),
+            evans.Attachment(
+                abjad.Markup(r"\markup crine"),
+                selector=lambda _: abjad.select.note(_, 0),
+                direction=abjad.UP,
+            ),
         ),
         evans.MusicCommand(
             ("viola 3 voice", [1, 2, 3, 4, 5, 6]),

@@ -2,20 +2,20 @@
 \language "english"
 %{ #(set-default-paper-size "letterlandscape") %}
 #(set-default-paper-size '(cons (* 8.5 in) (* 11 in)))
-#(set-global-staff-size 17) % was 20 is standard parts
+#(set-global-staff-size 18) % was 20 is standard parts
 
 %{ \include "/Users/gregoryevans/ekmelily/ly/ekmel-24.ily" % just trying this out %}
 %{ \ekmelicStyle evans-alt-one % just trying this out %}
 
 \include "baca-spanners.ily"
-\include "../../lib.ily"
+\include "../../../lib.ily"
 \include "evans.ily"
 \include "evans-accidentals-markups.ily"
 \include "evans-chart-markups.ily"
 \include "evans-spanners.ily"
 \include "/Users/gregoryevans/abjad-ext-microtones/abjadext/microtones/lilypond/ekmelos-ji-accidental-markups.ily"
 
-afterGraceFraction = #(cons 15 16)
+afterGraceFraction = 1/32
 %{ \pointAndClickOff %}
 
 %%%%%
@@ -224,52 +224,92 @@ dashedStaffSymbolLines =
 	title =  \markup \center-column {
             \fontsize #-2.5
 			\line {
-				\override #'(font-name . "Helvetica")
-				"c o m m i s s i o n e d   b y   t h e   A n t i g o n e   M u s i c   C o l l e c t i v e"
+				\override #'(font-name . "Helvetica Bold")
+				"c o m m i s s i o n e d   b y   V I V O  C o l u m b u s"
 			}
-            \override #'(font-name . "Helvetica Bold")
+            %{ \override #'(font-name . "Helvetica Neue LT Arabic") %}
+            \override #'(font-name . "Amiri Bold")
             \fontsize #8
             \line {
                 \vspace #3
                 \concat {
-                Ν
-                \hspace #2.5
-                υ
-                \hspace #2.5
-                κ
-                \hspace #2.5
-                τ
-                \hspace #2.5
-                ι
-                \hspace #2.5
-                β
-                \hspace #2.5
-                ό
-                \hspace #2.5
-                η
-                \hspace #5
-                III
+                شقائقَ النُّعْمانِ
                 }
             }
 			\line{
                 \vspace #1
                 \fontsize #-3
-				\override #'(font-name . "Helvetica")
-				"ή ,   ο ἶ ν ο ψ"
+				\override #'(font-name . "Helvetica Bold")
+                \concat {
+                s
+                \hspace #2
+                h
+                \hspace #2
+                q
+                \hspace #2
+                a
+                \hspace #2
+                y
+                \hspace #2
+                q
+                \hspace #4
+                a
+                \hspace #2
+                l
+                \hspace #2
+                n
+                \hspace #2
+                u
+                \hspace #2
+                e
+                \hspace #2
+                m
+                \hspace #2
+                a
+                \hspace #2
+                n
+                \hspace #2
+                i
+                }
+			}
+            \line{
+                \vspace #1
+                \fontsize #-3
+				\override #'(font-name . "Helvetica Bold")
+                \concat {
+                w
+                \hspace #1.25
+                i
+                \hspace #1.25
+                n
+                \hspace #1.25
+                d
+                \hspace #1.25
+                f
+                \hspace #1.25
+                l
+                \hspace #1.25
+                o
+                \hspace #1.25
+                w
+                \hspace #1.25
+                e
+                \hspace #1.25
+                r
+                \hspace #1.25
+                s
+                }
 			}
             \fontsize #-3
             \override #'(font-name . "Helvetica Italic")
             \line {
                 \vspace #0.5
                 f o r \hspace #2.75
-                s o p r a n o ,\hspace #2.75
-                n a r r a t o r ,\hspace #2.75
-                a n d \hspace #2.75
-                e n s e m b l e
+                t h r e e\hspace #2.75
+                v i o l a s
             }
     }
-	composer = \markup \override #'(font-name . "Helvetica") \fontsize #2 {"Gregory Rowland Evans (*1995)"}
-    poet = \markup \override #'(font-name . "Helvetica") \fontsize #2 {"Dimitris Lyacos (*1966)"}
+	composer = \markup \override #'(font-name . "Helvetica Bold") \fontsize #2 {"Gregory Rowland Evans (*1995)"}
 	tagline = \markup { "" }
 }
 
@@ -294,12 +334,13 @@ dashedStaffSymbolLines =
         \type Engraver_group
         \consists Axis_group_engraver
 		\consists Bar_number_engraver
-        \consists Time_signature_engraver
+        \consists Caesura_engraver
+        %{ \consists Time_signature_engraver %}
 		%{ \consists Mark_engraver % for section labels. Any errors? %}
 		%{ \consists Metronome_mark_engraver %}
 		\consists Text_engraver
 		\consists Text_spanner_engraver
-        \consists "Measure_grouping_engraver"
+        %{ \consists "Measure_grouping_engraver" %}
 		\accepts LayoutContext
 
 		\override MetronomeMark.stencil = ##f
@@ -335,6 +376,7 @@ dashedStaffSymbolLines =
     }
 	\context {
 		\Score
+        %{ \consists #Elapsed_time_engraver %}
 		\remove Metronome_mark_engraver
 		\remove Mark_engraver
 		%{ \remove Volta_engraver %}
@@ -363,7 +405,7 @@ dashedStaffSymbolLines =
 		%{ \override Clef.whiteout-style = #'outline
 		\override Clef.whiteout = 1 %}
 		\override DynamicText.font-size = #-2
-		\override DynamicLineSpanner.staff-padding = 4 %was 7
+		\override DynamicLineSpanner.staff-padding = 2 %was 7
 		\override DurationLine.breakable = ##t
 		\override DurationLine.thickness = 2.5
 		\override Glissando.breakable = ##t
@@ -384,11 +426,11 @@ dashedStaffSymbolLines =
 		\override RepeatTie.X-extent = ##f
 		\override PaperColumn.used = ##t % just trying this out
 		%{ \override SpacingSpanner.spacing-increment = 1.25 %}
-		\override SpacingSpanner.strict-grace-spacing = ##t % trevor
-		\override SpacingSpanner.strict-note-spacing = ##t % trevor
+		%{ \override SpacingSpanner.strict-grace-spacing = ##t % trevor %}
+		%{ \override SpacingSpanner.strict-note-spacing = ##t % trevor %}
 		\override SpacingSpanner.uniform-stretching = ##t % trevor
-		\override GraceSpacing.spacing-increment = #1.5 %?? does this collaborate with afterGraceFraction?
-		\override GraceSpacing.shortest-duration-space = #1.6
+		\override GraceSpacing.spacing-increment = #1 %?? does this collaborate with afterGraceFraction?
+		\override GraceSpacing.shortest-duration-space = #1
 		\override Stem.stemlet-length = #1.15
 		\override StemTremolo.beam-width = 1.5
         \override StemTremolo.flag-count = 4
@@ -460,7 +502,7 @@ dashedStaffSymbolLines =
 		%{ \consists Volta_engraver %}
 		\consists Duration_line_engraver
 		\numericTimeSignature
-		\remove Time_signature_engraver
+		%{ \remove Time_signature_engraver %}
 		\remove Separating_line_group_engraver % just trying this out
 		fontSize = #-1
 		explicitClefVisibility = #end-of-line-invisible
@@ -507,7 +549,7 @@ dashedStaffSymbolLines =
 		\override AccidentalCautionary.stencil = ##f
         \override BarLine.bar-extent = #'(-1.5 . 1.5)
 	}
-	\context {
+    \context {
 		\Staff
 		\name VanishingStringStaff
 		\type Engraver_group
@@ -530,6 +572,13 @@ dashedStaffSymbolLines =
 		\override AccidentalCautionary.stencil = ##f
         \override Rest.stencil = ##f
         \override BarLine.bar-extent = #'(-4 . 4)
+        % just trying these out
+        \override Stem.stencil = ##f
+        \override Beam.stencil = ##f
+        \override Dots.stencil = ##f
+        \override Flag.stencil = ##f
+        \override NoteHead.transparent = ##t
+
 	}
     \context {
 		\Staff
@@ -582,7 +631,7 @@ dashedStaffSymbolLines =
 			\override #'(font-name . "Helvetica Bold")
 			\concat {
 			\fontsize #3
-			"nyctivoe III" \hspace #1.5 — \hspace #1.5 \fontsize #3 GR \hspace #1 \fontsize #3 Evans
+			"shqayq alnuemani" \hspace #1.5 — \hspace #1.5 \fontsize #3 GR \hspace #1 \fontsize #3 Evans
 			}
             \override #'(font-name . "Helvetica Bold")
 	        \concat {
@@ -601,7 +650,7 @@ dashedStaffSymbolLines =
 			\override #'(font-name . "Helvetica Bold")
 			\concat {
 			\fontsize #3
-        	 "nyctivoe III" \hspace #1.5 — \hspace #1.5 \fontsize #3 GR \hspace #1 \fontsize #3 Evans
+        	 "shqayq alnuemani" \hspace #1.5 — \hspace #1.5 \fontsize #3 GR \hspace #1 \fontsize #3 Evans
 			}
     	}
 	print-first-page-number = ##f
@@ -639,11 +688,11 @@ dashedStaffSymbolLines =
 
 	% experimental
 
-	%{ #(define fonts
-      (set-global-fonts
-       #:roman "Bell MT"
-       #:factor (/ staff-height pt 20)
-      )) %}
+    property-defaults.fonts.roman = "Helvetica Bold"
+    property-defaults.fonts.serif = "Helvetica Bold"
+    property-defaults.fonts.sans = "Helvetica Bold"
+    property-defaults.fonts.typewriter = "Helvetica Bold"
+    property-defaults.fonts.bold = "Helvetica Bold"
 }
 
 

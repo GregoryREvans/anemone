@@ -275,32 +275,87 @@
 
                                             \pitchedTrill
                                             f32
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan bf
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             fs32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             bf32
                                             \p
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             fs32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             b32
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16
@@ -345,28 +400,69 @@
 
                                             \pitchedTrill
                                             bf32
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan f'
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             fs32
                                             \p
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             bf32
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r32
@@ -381,28 +477,55 @@
 
                                         \pitchedTrill
                                         a'16
-                                        (
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak circled-tip ##t
                                         \<
                                         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                         \startTrillSpan cs''
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         bf'16
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
                                         \revert Staff.Stem.stemlet-length
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         g'16
                                         \mp
                                         ]
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak circled-tip ##t
                                         \>
 
                                         \override Staff.Stem.stemlet-length = 0.75
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         af'16
                                         [
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
                                         fs'16
                                         \!
-                                        )
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
                                         r16
                                         \stopTrillSpan
@@ -426,28 +549,69 @@
 
                                             \pitchedTrill
                                             f'16
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan bf'
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             bf'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             b'16
                                             \mp
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             bf'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             cs''16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             c''16
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16
@@ -489,42 +653,132 @@
 
                                             \pitchedTrill
                                             d''32
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan e''
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             ef''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             c''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             bf'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             b'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             bf'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af'32
                                             \mf
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             fs'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             bf'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             b'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             c''32
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16
@@ -548,6 +802,10 @@
                                         \pitchedTrill
                                         cs''16
                                         \p
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                         \startTrillSpan fs''
 
@@ -565,30 +823,78 @@
 
                                             \pitchedTrill
                                             d''32
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan f''
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             e''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             ef''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             d''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             c''32
                                             \mf
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             f'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             fs'32
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16
@@ -634,14 +940,20 @@
                                             \pitchedTrill
                                             g'16
                                             \sfp
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak stencil #constante-hairpin
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan c''
 
                                             a'16
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16
@@ -658,6 +970,10 @@
                                         \pitchedTrill
                                         bf'16
                                         \f
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                         \startTrillSpan f''
 
@@ -696,28 +1012,69 @@
 
                                             \pitchedTrill
                                             a'16
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan cs''
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             ef'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             d'16
                                             \f
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             c'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             b16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             c'16
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r8
@@ -762,30 +1119,78 @@
 
                                             \pitchedTrill
                                             cs'32
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan fs'
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             d'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             e'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             bf32
                                             \f
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             b32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             c'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             d'32
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r32
@@ -803,28 +1208,69 @@
 
                                             \pitchedTrill
                                             cs'16
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan ds'
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             c'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             bf16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g16
                                             \ff
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             bf16
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r8
@@ -848,6 +1294,10 @@
                                         \pitchedTrill
                                         c'16
                                         \mp
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                         \startTrillSpan f'
 
@@ -863,6 +1313,10 @@
                                         \pitchedTrill
                                         b16
                                         \mf
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                         \startTrillSpan d'
 
@@ -906,28 +1360,55 @@
 
                                         \pitchedTrill
                                         bf16
-                                        (
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak circled-tip ##t
                                         \<
                                         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                         \startTrillSpan ef'
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         af16
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
                                         \revert Staff.Stem.stemlet-length
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         f16
                                         \ff
                                         ]
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak circled-tip ##t
                                         \>
 
                                         \override Staff.Stem.stemlet-length = 0.75
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         fs16
                                         [
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
                                         g16
                                         \!
-                                        )
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
                                         r16
                                         \stopTrillSpan
@@ -948,28 +1429,69 @@
 
                                             \pitchedTrill
                                             af32
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan ef'
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             bf32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af32
                                             \fff
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             fs32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             f32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             fs32
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r32
@@ -1244,26 +1766,60 @@
 
                                             \pitchedTrill
                                             fs16
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan b
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a16
                                             \p
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             bf16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             c'16
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r8
@@ -1308,32 +1864,87 @@
 
                                             \pitchedTrill
                                             cs'16
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan gs'
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             b16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             bf16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g16
                                             \p
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             bf16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             af16
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16
@@ -1352,14 +1963,20 @@
                                             \pitchedTrill
                                             a16
                                             \sfp
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak stencil #constante-hairpin
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan cs'
 
                                             g16
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r8
@@ -1384,6 +2001,10 @@
                                         fs8
                                         \p
                                         [
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                         \startTrillSpan b
 
@@ -1401,30 +2022,78 @@
 
                                             \pitchedTrill
                                             e16
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan fs
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             ef16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             f16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             fs16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g16
                                             \mp
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             a16
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r8
@@ -1466,24 +2135,51 @@
 
                                         \pitchedTrill
                                         bf'32
-                                        (
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak circled-tip ##t
                                         \<
                                         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                         \startTrillSpan ef''
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         af'32
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         g'32
                                         \mp
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak circled-tip ##t
                                         \>
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         f'32
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
                                         fs'32
                                         \!
-                                        )
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
                                         r32
                                         \stopTrillSpan
@@ -1507,26 +2203,60 @@
 
                                             \pitchedTrill
                                             e'32
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan g'
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             ef'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             fs'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             f'32
                                             \mf
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             af'32
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r32
@@ -1544,20 +2274,33 @@
 
                                             \pitchedTrill
                                             g'16
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan c''
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             bf'16
                                             \mf
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
                                             c''16
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r8
@@ -1603,22 +2346,42 @@
 
                                             \pitchedTrill
                                             cs''32
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan gs''
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             ef''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             d''32
                                             \f
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
                                             e''32
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r32
@@ -1636,22 +2399,35 @@
 
                                             \pitchedTrill
                                             f''8
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan a''
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             d''8
                                             \f
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
                                             \revert Staff.Stem.stemlet-length
                                             ef''8
                                             \!
-                                            )
                                             ]
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r4
@@ -1687,48 +2463,159 @@
 
                                             \pitchedTrill
                                             cs''32
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan fs''
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             c''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             cs''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             bf'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             fs'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             e'32
                                             \ff
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             ef'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             f'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             fs'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             bf'32
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16
@@ -1773,20 +2660,33 @@
 
                                             \pitchedTrill
                                             c''16
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan d''
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             b'16
                                             \ff
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
                                             cs''16
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16
@@ -1801,24 +2701,51 @@
 
                                         \pitchedTrill
                                         d''32
-                                        (
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak circled-tip ##t
                                         \<
                                         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                         \startTrillSpan g''
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         e''32
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         f''32
                                         \fff
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak circled-tip ##t
                                         \>
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         ef''32
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
                                         d''32
                                         \!
-                                        )
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
                                         r32
                                         \stopTrillSpan
@@ -1839,20 +2766,33 @@
 
                                             \pitchedTrill
                                             cs''16
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan e''
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             b'16
                                             \fff
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
                                             c''16
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16
@@ -1873,26 +2813,60 @@
 
                                             \pitchedTrill
                                             b'16
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan e''
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             fs'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             f'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             ef'16
                                             \p
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             d'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             e'16
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r8
@@ -1938,14 +2912,20 @@
                                             \pitchedTrill
                                             f'16
                                             \sfp
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak stencil #constante-hairpin
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan c''
 
                                             fs'16
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r8
@@ -1966,44 +2946,127 @@
 
                                         \pitchedTrill
                                         af'32
-                                        (
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak circled-tip ##t
                                         \<
                                         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                         \startTrillSpan c''
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         g'32
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         af'32
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         a'32
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         g'32
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
                                         \revert Staff.Stem.stemlet-length
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         af'32
                                         ]
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
                                         \override Staff.Stem.stemlet-length = 0.75
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         fs'32
                                         \p
                                         [
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak circled-tip ##t
                                         \>
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         g'32
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         f'32
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         e'32
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         ef'32
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
+                                        \tweak Accidental.stencil ##f
+                                        \tweak X-extent #'(0 . 0)
+                                        \tweak transparent ##t
                                         cs'32
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
                                         d'32
                                         \!
-                                        )
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
 
                                         \revert Staff.Stem.stemlet-length
                                         r32
@@ -2274,6 +3337,10 @@
                                         \pitchedTrill
                                         bf16
                                         \p
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                         \startTrillSpan ef'
 
@@ -2321,20 +3388,33 @@
                                             \pitchedTrill
                                             a8
                                             [
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan e'
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af8
                                             \p
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
                                             g8
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r8
@@ -2352,26 +3432,60 @@
 
                                             \pitchedTrill
                                             af16
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan c'
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             bf16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             c'16
                                             \p
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             b16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             c'16
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r8
@@ -2395,32 +3509,87 @@
 
                                             \pitchedTrill
                                             cs'32
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan fs'
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             b32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             fs32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g32
                                             \mp
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             g32
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r32
@@ -2438,26 +3607,60 @@
 
                                             \pitchedTrill
                                             fs32
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan gs
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             e32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             f32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             e32
                                             \mp
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             ef32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             f32
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16
@@ -2500,22 +3703,42 @@
 
                                             \pitchedTrill
                                             g32
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan c'
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             fs'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             f'32
                                             \mf
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
                                             af'32
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16
@@ -2540,14 +3763,20 @@
                                             \pitchedTrill
                                             g'16
                                             \sfp
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak stencil #constante-hairpin
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan bf'
 
                                             af'16
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16
@@ -2566,6 +3795,10 @@
                                         f'8
                                         \f
                                         ]
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                         \startTrillSpan bf'
 
@@ -2611,14 +3844,20 @@
                                             \pitchedTrill
                                             fs'16
                                             \sfp
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak stencil #constante-hairpin
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan cs''
 
                                             e'16
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16
@@ -2637,44 +3876,141 @@
 
                                             \pitchedTrill
                                             ef'32
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan g'
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             e'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             ef'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             f'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             d''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             ef''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             c''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             cs''32
                                             \mf
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             c''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             ef''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             d''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             e''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             f''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             e''32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             f''32
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16
@@ -2711,28 +4047,69 @@
 
                                             \pitchedTrill
                                             ef''32
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan af''
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             fs'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af'32
                                             \f
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af'32
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             g'32
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16
@@ -2774,6 +4151,10 @@
                                         \pitchedTrill
                                         fs'16
                                         \mp
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                         \startTrillSpan gs'
 
@@ -2794,32 +4175,87 @@
 
                                             \pitchedTrill
                                             e'16
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan a'
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             f'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             e'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             ef'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             f'16
                                             \f
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             fs'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             f'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             e'16
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r8
@@ -2840,20 +4276,33 @@
 
                                             \pitchedTrill
                                             ef'16
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan gf'
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             e'16
                                             \ff
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
                                             f'16
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16
@@ -2872,6 +4321,10 @@
                                         \pitchedTrill
                                         fs'16
                                         \mf
+                                          %! abjad.glissando(7)
+                                        - \abjad-zero-padding-glissando
+                                          %! abjad.glissando(7)
+                                        \glissando
                                         - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                         \startTrillSpan b'
 
@@ -2919,14 +4372,20 @@
                                             \pitchedTrill
                                             af'16
                                             \sfp
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak stencil #constante-hairpin
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan ef''
 
                                             g'16
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r8
@@ -2948,32 +4407,87 @@
 
                                             \pitchedTrill
                                             af'16
-                                            (
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \<
                                             - \tweak TrillPitchHead.stencil #(lambda (grob) (grob-interpret-markup grob #{ \markup \musicglyph #"noteheads.s0harmonic" #}))
                                             \startTrillSpan c''
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             a'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             f'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             af'16
                                             \ff
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
                                             - \tweak circled-tip ##t
                                             \>
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             g'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             fs'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
+                                            \tweak Accidental.stencil ##f
+                                            \tweak X-extent #'(0 . 0)
+                                            \tweak transparent ##t
                                             f'16
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             ef'16
                                             \!
-                                            )
+                                              %! abjad.glissando(7)
+                                            - \abjad-zero-padding-glissando
+                                              %! abjad.glissando(7)
+                                            \glissando
 
                                             \revert Staff.Stem.stemlet-length
                                             r16

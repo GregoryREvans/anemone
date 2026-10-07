@@ -257,6 +257,7 @@
                                             \clef "alto"
                                             aqs2
                                             \sfp
+                                            ^ \markup crine
                                             \<
                                               %! abjad.glissando(7)
                                             \glissando
@@ -1554,6 +1555,7 @@
                                             \clef "alto"
                                             eqf2
                                             \sfp
+                                            ^ \markup crine
                                             \<
                                               %! abjad.glissando(7)
                                             \glissando
@@ -2759,6 +2761,7 @@
                                             \clef "alto"
                                             eqs2
                                             \sfp
+                                            ^ \markup crine
                                             \<
                                               %! abjad.glissando(7)
                                             \glissando
